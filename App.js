@@ -1,7 +1,9 @@
 import * as React from 'react';
 import { View, Text , Image, SafeAreaView} from 'react-native';
+//import {Provider} from 'react-redux';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+//import {createStackNavigator} from '@react-navigation/stack';
 import HomeScreen from './components/HomeScreen';
 import GetNews from './components/GetNews';
 import WebViewComponent from './components/WebView';
@@ -24,48 +26,14 @@ import SignUpOtp from './components/SignUpOtp';
 import Compass from './components/Compass';
 import AddItems from './components/Trail';
 //import CompassNew from './components/CompassNew';
-import NewCompass from './components/NewCompass';
+//import NewCompass from './components/NewCompass';
+/* import ExpHomeScreen from './src/Components/ExpHomeScreen';
+import AddTransaction from './src/Components/AddTransaction';
+import store from './src/store'; */
 
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
-
-// const tabOptions = {
-//   showLabel: false,
-//   style:{
-//       position: 'absolute',
-//       bottom: 25,
-//       left: 20,
-//       right: 20,
-//       eleva
-//   }
-  
-// };
-
-// const CameraButton = () => {
-//   return (
-//       <View
-//           style={{
-//               alignItems: 'center',
-//               justifyContent: 'center',
-//               width: 50,
-//               height: 50,
-//               borderRadius: 25,
-//               backgroundColor: 'white',
-//           }}
-//       >
-//           <Image
-//               source={require('./assets/news1.png')}
-//               resizeMode="contain"
-//               style={{
-//                   width: 23,
-//                   height: 23
-//               }}
-//           />
-//       </View>
-//   );
-// };
-
 
 const Tabs = () => {
 
@@ -73,17 +41,6 @@ const Tabs = () => {
       
       <Tab.Navigator 
       
-        /*   tabBarOptions={{ showLabel: false,
-        style: {
-            position:'absolute',
-            bottom: 25,
-            left: 20,
-            right: 20,
-            elevation:0,
-            backgroundColor:'blue',
-            borderRadius:15,
-            height:90
-        }}} */
           screenOptions={  (  {  route }) => ({ 
               
 
@@ -232,23 +189,9 @@ const Tabs = () => {
 };
 
 
-// function MyTabs() {
-//   return (
-    
-//     <Tab.Navigator screenOptions={{headerShown: true}}>
-      
-//       <Tab.Screen name="Dashboard" component={ListScreen} />
-//       <Tab.Screen name="Home" component={HomeScreen}/>
-//       <Tab.Screen name='Login' component={LoginScreen} /> 
-//       {/* <Tab.Screen name='QR' component={Scanner} />  */}
-      
-//     </Tab.Navigator>
-    
-//   );
-// }
-
 function App() {
   return (
+    
     <NavigationContainer>
       <Stack.Navigator initialRouteName='GetOtp' screenOptions={{headerShown: false }}>
          <Stack.Screen name='OtpLogin' component={Login} /> 
@@ -266,12 +209,25 @@ function App() {
            <Stack.Screen name='Compass' component={Compass} />   
           <Stack.Screen name='AddItems' component={AddItems} /> 
           {/* <Stack.Screen name='CompassNew' component={CompassNew} />  */}
-          <Stack.Screen name='NewCompass' component={NewCompass} /> 
+         {/*  <Stack.Screen name='NewCompass' component={NewCompass} />  */}
+        {/*  <Stack.Screen
+            name="Home"
+            component={ExpHomeScreen}
+            options={{
+              title: 'Expense tracker App',
+            }}
+          />
+          <Stack.Screen
+            name="Add"
+            component={AddTransaction}
+            options={{title: 'Add expense'}}
+          />
  
-
+ */}
 
       </Stack.Navigator>
     </NavigationContainer>
+    
   );
 }
 
