@@ -10,7 +10,7 @@ import {
   TouchableOpacity,
   Alert,
 } from 'react-native';
-import LoginScreen from './LoginScreen';
+import GetOtp from './GetOtp';
 
 export default class Splashscreen extends Component {
   constructor() {
@@ -32,7 +32,8 @@ export default class Splashscreen extends Component {
 
     setTimeout(function () {
       that.Hide_Splash_Screen();
-      this.props.navigation.navigate(LoginScreen);
+      this.props.navigation.navigate('GetOtp');
+    
     }, 5000);
 
   }
@@ -71,7 +72,7 @@ export default class Splashscreen extends Component {
       <View style={styles.MainContainer}>
         <Text style={{textAlign: 'center'}}> Hello Guys </Text>
 
-        {this.state.isVisible === true ? Splash_Screen : LoginScreen}
+        {this.state.isVisible === true ? Splash_Screen : <GetOtp/>}
       </View>
     );
   }

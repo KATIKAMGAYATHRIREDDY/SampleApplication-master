@@ -1,13 +1,10 @@
 import * as React from 'react';
 import { View, Text , Image, SafeAreaView} from 'react-native';
-//import {Provider} from 'react-redux';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-//import {createStackNavigator} from '@react-navigation/stack';
 import HomeScreen from './components/HomeScreen';
 import GetNews from './components/GetNews';
 import WebViewComponent from './components/WebView';
-import LoginScreen from './components/LoginScreen';
 import ListScreen from './components/Lists';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import DescNews from './components/DescNews';
@@ -17,19 +14,14 @@ import Splashscreen from './components/SplashScreen';
 import Login from './components/OtpLogin';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import GetOtp from './components/GetOtp';
-import Trials from './components/Trial';
-import myIcon from './components/Trial';
 import Expense from './components/ExpenseTracker';
 import SignUp from './components/SignUp';
-import { AuthContext } from './components/context';
 import SignUpOtp from './components/SignUpOtp';
 import Compass from './components/Compass';
 import AddItems from './components/Trail';
-//import CompassNew from './components/CompassNew';
-//import NewCompass from './components/NewCompass';
-/* import ExpHomeScreen from './src/Components/ExpHomeScreen';
-import AddTransaction from './src/Components/AddTransaction';
-import store from './src/store'; */
+import Notes from './components/Notes';
+import  Task  from './components/Task';
+
 
 
 const Stack = createNativeStackNavigator();
@@ -208,22 +200,8 @@ function App() {
          <Stack.Screen name='SignUpOtp' component={SignUpOtp} /> 
            <Stack.Screen name='Compass' component={Compass} />   
           <Stack.Screen name='AddItems' component={AddItems} /> 
-          {/* <Stack.Screen name='CompassNew' component={CompassNew} />  */}
-         {/*  <Stack.Screen name='NewCompass' component={NewCompass} />  */}
-        {/*  <Stack.Screen
-            name="Home"
-            component={ExpHomeScreen}
-            options={{
-              title: 'Expense tracker App',
-            }}
-          />
-          <Stack.Screen
-            name="Add"
-            component={AddTransaction}
-            options={{title: 'Add expense'}}
-          />
- 
- */}
+           <Stack.Screen name='Notes' component={Notes} /> 
+           <Stack.Screen name='Task' component={Task} />  
 
       </Stack.Navigator>
     </NavigationContainer>

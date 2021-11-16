@@ -141,7 +141,7 @@ const ListScreen = (props) => {
         
         <TouchableOpacity onPress={() => props.navigation.navigate('Expense')}
           style={{
-            bottom: '60%', left: '42%',height:'17%',width:'17%',  flexDirection: 'column',  shadowColor: 'white', elevation: 10
+            bottom: '60%', left: '42%',height:'10%',width:'14%',  flexDirection: 'column',  shadowColor: 'white', elevation: 10
             , borderWidth: 0, borderColor: 'white',
             borderRadius: 20
           }}>
@@ -150,9 +150,19 @@ const ListScreen = (props) => {
             lightShadowColor="#3344FF"
             style={styles1.Icon_Style}
           />
-          <Image style={{ height:'65%', width: '65%', borderRadius: 20, bottom: '65%', left: '8%' }} source={require('../assets/Expense5.png')}></Image>
-          <Text style={{ bottom:50, left: 9, fontWeight: 'bold', color: '#013220',fontSize:13 }}>Expense Tracker</Text>
+          <Image style={{ height:'75%', width: '75%', borderRadius: 10, bottom: '95%', left: '8%' }} source={require('../assets/Expense5.png')}></Image>
+          <Text style={{ bottom:35, left: 9, fontWeight: 'bold', color: '#013220',fontSize:13 }}>Expense Tracker</Text>
 
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => props.navigation.navigate('Notes')}
+          style={{ width: '15%', height: '12%', shadowColor: 'white', elevation: 10, borderWidth: 0, borderColor: 'white', bottom:'70%', left: '64%', borderRadius: 20, }}>
+          <NeomorphBlur
+            darkShadowColor="#003300"
+            lightShadowColor="#3344FF"
+            style={styles1.Icon_Style}
+          />
+          <Image style={{ bottom: '85%', left: '15%',height:'70%', width: '70%', borderRadius: 1 }} source={require('../assets/Text.png')}></Image>
+          <Text style={{ bottom:'68%', left: '15%', fontWeight: 'bold', color: '#013220',fontSize:13 }}>Notes</Text>
         </TouchableOpacity>
 
 
